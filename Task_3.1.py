@@ -9,7 +9,7 @@ while True:
         print ("Логин должен содержать больше 3-х символов!")
     else: break
 
-def validpass(password):
+def validpass(password): 
     return any(char.isupper() for char in password) \
     and any(char.islower() for char in password) \
     and any(char.isdigit() for char in password) \
