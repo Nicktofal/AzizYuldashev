@@ -1,31 +1,5 @@
-import os
-os.system('cls')
+pi = 3.14159
+r = input ("Введите радиус круга: ")
+S = pi * float(r) ** 2
 
-print ("Регистрация на сайте...")
-
-while True:
-    login = input("Придумайте логин (минимум 3 символа): ")
-    if len(login) < 3:
-        print ("Логин должен содержать больше 3-х символов!")
-    else: break
-
-def validpass(password): 
-    return any(char.isupper() for char in password) \
-    and any(char.islower() for char in password) \
-    and any(char.isdigit() for char in password) \
-    and any(not char.isalnum() for char in password)
-
-while True:
-    password = input("Придумайте надёжный пароль (минимум 8 символов): ")
-    if len(password) < 8:
-        print("Пароль должен содержать минимум 8 символов!")
-    else:
-        if not validpass(password):
-            print ("Пароль должен содержать Заглавную и строчную букву, цифру и спец символ")
-        else:
-            checkpass = input("Повторите пароль, чтобы не возникло опечаток: ")
-            if checkpass == password:
-                print ("Регистрация завершена!")
-                break
-            else: print ("Пароли должны совпадать!")
-        
+print ("Площадь равна: ", S)
